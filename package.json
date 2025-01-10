@@ -1,0 +1,53 @@
+{
+  "name": "soloproject",
+  "version": "1.0.0",
+  "main": "index.js",
+  "proxy": "http://localhost:3000",
+  "scripts": {
+    "build": "webpack",
+    "start": "nodemon server/server.js",
+    "dev": "concurrently \"cross-env NODE_ENV=development webpack-dev-server --hot --progress --color\" \"nodemon ./server/server.js\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Schno Mozingo",
+  "license": "MIT",
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.2.3",
+    "bcrypt": "^5.1.1",
+    "cookie-parser": "^1.4.7",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.9.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-redux": "^8.0.5",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^6.28.1",
+    "redux": "^4.0.5",
+    "sass-loader": "^12.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.2.3",
+    "concurrently": "^5.0.0",
+    "cross-env": "^6.0.3",
+    "css-loader": "^6.5.1",
+    "eslint": "^7.17.0",
+    "eslint-plugin-react": "^7.21.5",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.5.0",
+    "nodemon": "^3.1.9",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.64.1",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.5.0",
+    "webpack-hot-middleware": "^2.24.3"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "server/data/*",
+      "client/*"
+    ]
+  }
+}
