@@ -5,7 +5,7 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const mongoose = require('mongoose');
 const userController = require('./controllers/userController');
-
+const appointments = require('./controllers/appointments');
 const mongoURI = process.env.NODE_ENV === 'test' ? 'mongodb://localhost/solodb' : 'mongodb://localhost/solodb';
 mongoose.connect(mongoURI);
 
@@ -21,6 +21,14 @@ app.use(express.static(path.join(__dirname, '..', 'dist')));
 
 app.get('/userInfo', userController.userInfo, (req, res) => {
   return res.status(200).json(res.locals.userData);
+});
+
+// app.get('/appointments', appointments.getInfo, (req, res) => {
+//   return res.status(200).json();
+// });
+
+app.post('/main/appointments', appointments.createAppointment, (req, res) => {
+  return res.status(200).json({ message: 'Appointment created successfully' });
 });
 
 app.post('/signup', userController.createUser, (req, res) => {

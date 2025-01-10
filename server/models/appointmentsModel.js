@@ -8,4 +8,4 @@ const appointmentsSchema = new Schema ({
     provider: {type: String, required: true}
 });
 
-module.exports = mongoose.model('appointments', appointmentsSchema);
+module.exports = mongoose.model('Appointments', appointmentsSchema);

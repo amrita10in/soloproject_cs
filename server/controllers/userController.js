@@ -8,8 +8,6 @@ const userController = {};
 
 userController.createUser = async (req, res, next) => {
   const {username, password, childName, childDOB} = req.body;
-  console.log('req.body', req.body);
-  console.log('childDOB', typeof childDOB);
   if(typeof username !== 'string' || typeof  password !== 'string' || typeof childName !== 'string' || typeof childDOB !== 'string'){
     return next ({
       log: 'Error in usercontroller.createUser',
@@ -20,7 +18,6 @@ userController.createUser = async (req, res, next) => {
   try {
     const hashedPassword = await bcrypt.hash(password, 10);
     const newUser = new User({username, password : hashedPassword, childName, childDOB});
-    console.log(newUser);
     await User.collection.insertOne(newUser);
     console.log('User created successfully:', newUser);
     return next();
@@ -31,7 +28,6 @@ userController.createUser = async (req, res, next) => {
 
 userController.verifyUser = async (req, res, next) => {
 try{
-  console.log('req.body', req.body);
   const {username, password} = req.body;
   const myUser = await User.findOne({username});
 
