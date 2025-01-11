@@ -4,7 +4,7 @@ import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import App from './App';
 import store from './store.js';
-import styles from './stylesheets/styles.css';
+import styles from './stylesheets/styles.module.css';
 
 const root = ReactDOM.createRoot(document.getElementById('contents'));
 root.render(

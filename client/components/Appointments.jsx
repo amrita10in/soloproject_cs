@@ -4,24 +4,27 @@ import AgeComponent from './AgeComponent';
 import AppointmentsForm from './AppointmentsForm';
 
 function Appointments () {
-  const [items, setApptData] = useState("");
+  const [items, setApptData] = useState([]);
   const [showForm, setForm] = useState(false);
 
-  function handleClick (){
-    useEffect(()=> {
-        fetch('/appointments')
-        .then(data => data.json());
-    }, [appts])
+  async function handleClick (){
+    try{
+    const response = await fetch('/main/getAppointments');
+    const data = await response.json();
+    console.log(data);
+    } catch (err){
+      console.log('Error in fetching data:'+ err);
+    }
   }
 
-  function handleClick2 (){
+  function handleAddAppointments (){
     setForm(true);
   }
 
   return (
   <>
     <div>
-    <p><button type='submit'>My Appointments</button></p>
+    <p><button type='submit' onClick={handleClick}>My Appointments</button></p>
     </div>
     {/* <div>
       {items.map(item => {
@@ -29,7 +32,7 @@ function Appointments () {
         return <p>{item}</p>
       })}
     </div> */}
-    <p><button type='submit' onClick={handleClick2}>Add Appointments</button></p>
+    <p><button type='submit' onClick={handleAddAppointments}>Add Appointments</button></p>
     {showForm && <AppointmentsForm />}
   </>
   )
