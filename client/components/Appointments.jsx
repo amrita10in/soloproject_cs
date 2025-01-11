@@ -12,6 +12,7 @@ function Appointments () {
     const response = await fetch('/main/getAppointments');
     const data = await response.json();
     console.log(data);
+    setApptData(data);
     } catch (err){
       console.log('Error in fetching data:'+ err);
     }
@@ -21,17 +22,29 @@ function Appointments () {
     setForm(true);
   }
 
+
+
   return (
   <>
     <div>
     <p><button type='submit' onClick={handleClick}>My Appointments</button></p>
     </div>
-    {/* <div>
-      {items.map(item => {
-        console.log(item);
-        return <p>{item}</p>
-      })}
-    </div> */}
+    <div>
+      {items.map((item, index) => {
+        return (
+        <div key={index}>
+        <br/>
+        <p> Appointment: {++index}</p>
+        <p>   Date: {item.date}</p>
+        <p>   Type: {item.type}</p>
+        <p>   Location: {item.location}</p>
+        <p>   Provider: {item.provider}</p>
+        <br/>
+        </div>
+      )
+     })
+    }
+    </div>
     <p><button type='submit' onClick={handleAddAppointments}>Add Appointments</button></p>
     {showForm && <AppointmentsForm />}
   </>

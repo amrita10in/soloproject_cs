@@ -20,7 +20,7 @@ function AgeComponent () {
         console.log("whilecookie", cookie);
       }
       if(cookie.indexOf(name) > -1){
-        username = cookie.substring(name.length+1, cookie.length);
+        username = cookie.substring(name.length, cookie.length);
         console.log('username', username);
         break;
       }
@@ -31,6 +31,7 @@ function AgeComponent () {
   const username = getCookies('username');
 
   const calculateAge = (dateString) => {
+    console.log('dateString', dateString);
     const [month, day, year] = dateString.split('/').map(Number);
     const birthDate = new Date(year, month - 1, day);
     const today = new Date();
