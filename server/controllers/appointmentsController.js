@@ -6,7 +6,6 @@ const appointmentsController = {};
 appointmentsController.getAppointments = async (req, res, next) => {
   try{
   const data = await Appointments.find();
-  console.log(data);
   res.locals.allAppointments = data;
   next();
   } catch (err){
@@ -16,7 +15,6 @@ appointmentsController.getAppointments = async (req, res, next) => {
 
 appointmentsController.createAppointment = async (req, res, next) => {
   const {date, type, location, provider} = req.body;
-  console.log(date, type, location, provider);
   if( typeof date !== 'string' || typeof type !== 'string' || typeof location !== 'string' || typeof provider !== 'string'){
     return next({
       log: 'Error in appointments.thiscreateAppointment',
@@ -26,7 +24,6 @@ appointmentsController.createAppointment = async (req, res, next) => {
   }
   try {
     const newAppointment = new Appointments({date, type, location, provider});
-    console.log("newAppointment", newAppointment);
     await Appointments.collection.insertOne(newAppointment);
     return next();
   } catch (err){

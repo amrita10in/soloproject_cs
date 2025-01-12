@@ -83,7 +83,7 @@ function AgeComponent () {
       <p id= "child">{childName} is {ageInMonths} months old as of today</p>
       <p id= "data">Here is some information about this age:</p>
     </div>
-    {/* <Milestones calculatedAgeRange={ageRange}/> */}
+    <Milestones calculatedAgeRange={ageRange}/>
   </>
   );
 };

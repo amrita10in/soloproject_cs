@@ -5,7 +5,9 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const mongoose = require('mongoose');
 const userController = require('./controllers/userController');
-const appointments = require('./controllers/appointments');
+const appointmentsController = require('./controllers/appointmentsController');
+const milestonesController = require('./controllers/milestonesController');
+
 const mongoURI = process.env.NODE_ENV === 'test' ? 'mongodb://localhost/solodb' : 'mongodb://localhost/solodb';
 mongoose.connect(mongoURI);
 
@@ -23,11 +25,15 @@ app.get('/userInfo', userController.userInfo, (req, res) => {
   return res.status(200).json(res.locals.userData);
 });
 
-// app.get('/appointments', appointments.getInfo, (req, res) => {
-//   return res.status(200).json();
-// });
+app.get('/main/getAppointments', appointmentsController.getAppointments, (req, res) => {
+  return res.status(200).json(res.locals.allAppointments);
+});
 
-app.post('/main/appointments', appointments.createAppointment, (req, res) => {
+app.get('/milestones', milestonesController.getMilestones, (req, res) => {
+  return res.status(200).json(res.locals.milestonesData);
+});
+
+app.post('/main/appointments', appointmentsController.createAppointment, (req, res) => {
   return res.status(200).json({ message: 'Appointment created successfully' });
 });
 

@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const Schema = mongoose.schema;
+const Schema = mongoose.Schema;
 
 const milestoneSchema = new Schema ({
   age: {type: Number, required: true },
