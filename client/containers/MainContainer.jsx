@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import AgeComponent from '../components/AgeComponent';
 import Appointments from '../components/Appointments';
+import Milestones from '../components/Milestones';
 // import TotalsDisplay  from '../components/TotalsDisplay.jsx';
 // import MarketsContainer from '../containers/MarketsContainer.jsx';
 

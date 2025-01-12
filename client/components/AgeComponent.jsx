@@ -1,6 +1,7 @@
 import React from "react";
 import {useState, useEffect} from "react";
 import { useSelector } from "react-redux";
+import Milestones from './Milestones';
 
 
 function AgeComponent () {
@@ -44,6 +45,7 @@ function AgeComponent () {
     return ageInMonths;
   }
 
+
   useEffect(() => {
     console.log('usernameinUseEffect', username);
     fetch(`/userInfo?username=${encodeURIComponent(username)}`)
@@ -55,13 +57,34 @@ function AgeComponent () {
     })
   }, [username])
 
+  console.log('ageInMonths', ageInMonths);
+
+  function calculateRange (ageInMonths){
+    console.log('ageInMonthsInFunction', ageInMonths);
+    let array = [0, 3, 6, 9, 12, 15, 18, 24];
+    let ageRange = 0;
+    for (let i = 0; i < array.length; i++){
+      if(ageInMonths > array[i] && ageInMonths < array[i+1]){
+        ageRange = array[i+1];
+        return ageRange;
+      }
+    }
+    return ageRange;
+  }
+
+  const ageRange = calculateRange(ageInMonths);
+  console.log('ageRange', ageRange);
+
 
   return (
+  <>
     <div className="ageCard">
       <p id= "name"> Welcome back {username}!</p>
       <p id= "child">{childName} is {ageInMonths} months old as of today</p>
       <p id= "data">Here is some information about this age:</p>
     </div>
+    {/* <Milestones calculatedAgeRange={ageRange}/> */}
+  </>
   );
 };
 

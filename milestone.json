@@ -1,0 +1,69 @@
+[{
+  "age": 3,
+  "milestones": [
+    "Smiles when you talk to or smile at her",
+    "Reacts to loud sounds",
+    "Watches you as you move",
+    "Holds head up when on tummy",
+    "Moves both arms and both legs"
+  ]
+},
+{"age": 6,
+  "milestones": [
+    "Knows familiar people",
+    "Likes to look at self in a mirror",
+    "Takes turns making sounds with you",
+    "Reaches to grab a toy she wants",
+    "Rolls from tummy to back"
+  ]
+},
+{
+  "age": 9,
+  "milestones": [
+    "Is shy, clingy, or fearful around strangers",
+    "Shows several facial expressions, like happy, sad, angry, and surprised",
+    "Makes a lot of different sounds like “mamamama” and “bababababa”",
+    "Gets to a sitting position by herself",
+    "Moves things from one hand to her other hand"
+  ]
+},
+{
+  "age": 12,
+  "milestones": [
+    "Plays games with you, like pat-a-cake",
+    "Waves “bye-bye”",
+    "Looks for things he sees you hide, like a toy under a blanket",
+    "Puts something in a container, like a block in a cup",
+    "Pulls up to stand"
+  ]
+},
+{
+  "age": 15,
+  "milestones": [
+    "Copies other children while playing, like taking toys out of a container when another child does",
+    "Shows you an object she likes",
+    "Tries to say one or two words besides “mama” or “dada,” like “ba” for ball or “da” for dog",
+    "Tries to use things the right way, like a phone, cup, or book",
+    "Takes a few steps on his own"
+  ]
+},
+{
+  "age": 18,
+  "milestones": [
+      "Moves away from you, but looks to make sure you are close by",
+      "Points to show you something interesting",
+      "Tries to say three or more words besides “mama” or “dada”",
+      "Copies you doing chores, like sweeping with a broom",
+      "Walks without holding on to anyone or anything"
+  ]
+},
+{
+  "age": 24,
+  "milestones": [
+      "Notices when others are hurt or upset, like pausing or looking sad when someone is crying",
+      "Points to things in a book when you ask, like “Where is the bear?”",
+      "Says at least two words together, like “More milk.”",
+      "Holds something in one hand while using the other hand; for example, holding a container and taking the lid off",
+      "Kicks a ball"
+  ]
+}]

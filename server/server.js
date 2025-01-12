@@ -23,9 +23,9 @@ app.get('/userInfo', userController.userInfo, (req, res) => {
   return res.status(200).json(res.locals.userData);
 });
 
-app.get('/main/getAppointments', appointments.getAppointments, (req, res) => {
-  return res.status(200).json(res.locals.allAppointments);
-});
+// app.get('/appointments', appointments.getInfo, (req, res) => {
+//   return res.status(200).json();
+// });
 
 app.post('/main/appointments', appointments.createAppointment, (req, res) => {
   return res.status(200).json({ message: 'Appointment created successfully' });
