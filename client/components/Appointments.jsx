@@ -6,17 +6,22 @@ import AppointmentsForm from './AppointmentsForm';
 function Appointments () {
   const [items, setApptData] = useState([]);
   const [showForm, setForm] = useState(false);
+  const [apptDisplay, setApptDisplay] = useState(false);
 
   async function handleClick (){
-    try{
+    if(!apptDisplay) {
+    try {
     const response = await fetch('/main/getAppointments');
     const data = await response.json();
     console.log(data);
     setApptData(data);
+    setApptDisplay(true);
+    console.log(apptDisplay);
     } catch (err){
       console.log('Error in fetching data:'+ err);
     }
   }
+}
 
   function handleAddAppointments (){
     setForm(true);
