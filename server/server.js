@@ -67,20 +67,19 @@ app.use((err, req, res, next) => {
   res.status(500).send({ error: err });
 });
 
-app.listen(PORT, ()=>{ console.log(`Listening on port ${PORT}...`); });
+app.listen(PORT, ()=>{console.log(`Listening on port ${PORT}...`); });
 
 module.exports = app;
 
-//manage session
+//add image of childgit
+//drop down to select future and past data
+
+//show appointments per user
+//ability to delete appointment
+
+//ability to add multiple children
+//styling
+// authenticate with jot before display
+
 //typescript implement
 //implement redux if time permits
-
-//ability to add picture
-//ability to add multiple children
-
-//modules based to current age range- milestones, top toys, sleep schedule, appointments
-
-//drop down to display optional data for past or future ranges
-//styling
-//ability to add and delete appointment // authenticate with jot before display
-

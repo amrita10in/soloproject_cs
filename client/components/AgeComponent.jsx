@@ -3,7 +3,7 @@ import {useState, useEffect} from "react";
 import { useSelector } from "react-redux";
 import Milestones from '../components/Milestones';
 import Toys from '../components/Toys';
-
+import Dropdown from '../components/Dropdown';
 
 function AgeComponent () {
   const [childName, setChildName] = useState("");
@@ -82,7 +82,8 @@ function AgeComponent () {
     <div className="ageCard">
       <p id= "name"> Welcome back {username}!</p>
       <p id= "child">{childName} is {ageInMonths} months old as of today</p>
-      <p id= "data">Here is some information about this age:</p>
+      <p id= "data">Here is some information about this age: </p>
+      <Dropdown calculatedAgeRange={ageRange}/>
     </div>
     <Milestones calculatedAgeRange={ageRange}/>
     <Toys calculatedAgeRange={ageRange}/>
