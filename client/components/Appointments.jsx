@@ -8,6 +8,7 @@ function Appointments () {
   const [showForm, setForm] = useState(false);
   const [apptDisplay, setApptDisplay] = useState(false);
 
+
   async function handleClick (){
     if(!apptDisplay) {
     try {
@@ -15,13 +16,16 @@ function Appointments () {
     const data = await response.json();
     console.log(data);
     setApptData(data);
-    setApptDisplay(true);
-    console.log(apptDisplay);
+    setApptDisplay(true)
     } catch (err){
       console.log('Error in fetching data:'+ err);
     }
+  } else {
+    setApptData([]);
+    setApptDisplay(false);
   }
 }
+
 
   function handleAddAppointments (){
     setForm(true);
