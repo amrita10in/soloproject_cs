@@ -17,6 +17,7 @@ function Appointments () {
     console.log(data);
     setApptData(data);
     setApptDisplay(true)
+
     } catch (err){
       console.log('Error in fetching data:'+ err);
     }

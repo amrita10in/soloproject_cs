@@ -1,7 +1,8 @@
 import React from "react";
 import {useState, useEffect} from "react";
 import { useSelector } from "react-redux";
-import Milestones from './Milestones';
+import Milestones from '../components/Milestones';
+import Toys from '../components/Toys';
 
 
 function AgeComponent () {
@@ -84,6 +85,7 @@ function AgeComponent () {
       <p id= "data">Here is some information about this age:</p>
     </div>
     <Milestones calculatedAgeRange={ageRange}/>
+    <Toys calculatedAgeRange={ageRange}/>
   </>
   );
 };

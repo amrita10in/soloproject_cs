@@ -7,6 +7,7 @@ const mongoose = require('mongoose');
 const userController = require('./controllers/userController');
 const appointmentsController = require('./controllers/appointmentsController');
 const milestonesController = require('./controllers/milestonesController');
+const toysController = require('./controllers/toysController');
 
 const mongoURI = process.env.NODE_ENV === 'test' ? 'mongodb://localhost/solodb' : 'mongodb://localhost/solodb';
 mongoose.connect(mongoURI);
@@ -31,6 +32,10 @@ app.get('/main/getAppointments', appointmentsController.getAppointments, (req, r
 
 app.get('/milestones', milestonesController.getMilestones, (req, res) => {
   return res.status(200).json(res.locals.milestonesData);
+});
+
+app.get('/toys', toysController.getToys, (req, res) => {
+  return res.status(200).json(res.locals.toysData);
 });
 
 app.post('/main/appointments', appointmentsController.createAppointment, (req, res) => {
