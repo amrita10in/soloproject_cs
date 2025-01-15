@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import Milestones from '../components/Milestones';
 import Toys from '../components/Toys';
 import Dropdown from '../components/Dropdown';
+import styles from '../stylesheets/styles.module.css';
 
 function AgeComponent () {
   const [childName, setChildName] = useState("");
@@ -80,13 +81,13 @@ function AgeComponent () {
   return (
   <>
     <div className="ageCard">
-      <p id= "name"> Welcome back {username}!</p>
-      <p id= "child">{childName} is {ageInMonths} months old as of today</p>
-      <p id= "data">Here is some information about this age: </p>
+      <p id= "name" className= {styles.welcomeText}> Welcome {username}</p>
+      <p id= "child" className={styles.mainText}>{childName} is {ageInMonths} months old as of today!</p>
+      <br></br>
+      <p id= "data" className={styles.informationText}>Here is some information about this age: </p>
       <Dropdown calculatedAgeRange={ageRange}/>
     </div>
-    <Milestones calculatedAgeRange={ageRange}/>
-    <Toys calculatedAgeRange={ageRange}/>
+
   </>
   );
 };

@@ -1,5 +1,6 @@
 import React from "react";
 import {useState, useEffect} from "react";
+import styles from '../stylesheets/styles.module.css';
 
 function AppointmentsForm () {
 
@@ -44,7 +45,8 @@ function AppointmentsForm () {
       <p><label id='provider'>Provider</label></p>
       <p><input type= "text" name='provider' value={formData.provider} onChange={handleChange} id="providerField"></input></p>
 
-      <p><button type="submit" id="submitForm" onClick={handleOnClick}>Submit</button></p>
+      <p><button 
+      type="submit" id="submitForm" onClick={handleOnClick}>Submit</button></p>
   </div>
 </>
   )

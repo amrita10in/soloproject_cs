@@ -2,6 +2,7 @@ import React from "react";
 import {useState, useEffect} from "react";
 import AgeComponent from './AgeComponent';
 import AppointmentsForm from './AppointmentsForm';
+import styles from '../stylesheets/styles.module.css';
 
 function Appointments () {
   const [items, setApptData] = useState([]);
@@ -37,7 +38,7 @@ function Appointments () {
   return (
   <>
     <div>
-    <p><button type='submit' onClick={handleClick}>My Appointments</button></p>
+    <p ><button className={styles.myAppointmentsButton} type='submit' onClick={handleClick}>My Appointments</button></p>
     </div>
     <div>
       {items.map((item, index) => {
@@ -55,7 +56,7 @@ function Appointments () {
      })
     }
     </div>
-    <p><button type='submit' onClick={handleAddAppointments}>Add Appointments</button></p>
+    <p><button className={styles.myAppointmentsButton} type='submit' onClick={handleAddAppointments}>Add Appointments</button></p>
     {showForm && <AppointmentsForm />}
   </>
   )

@@ -1,6 +1,7 @@
 import React from "react";
 import {useState, useEffect} from "react";
 import AgeComponent from './AgeComponent';
+import styles from '../stylesheets/styles.module.css';
 
 function Toys({ calculatedAgeRange }) {
   const [toysArray, setToys] = useState([]);
@@ -20,12 +21,12 @@ function Toys({ calculatedAgeRange }) {
 
 
   return (
-    <div>
-      <p>Top toys for this age group:</p>
+    <div className={styles.dataContainerToysText}>
+      <p className={styles.dataContainerHeader}>Top Toys</p>
       {toysArray.map((item, index) => {
         return (
           <div key={index}>
-            <p>{item.name}          {item.price}</p>
+            <p>{item.name}          - {item.price}</p>
             <a href={item.link}> Amazon link</a>
           </div>
         )

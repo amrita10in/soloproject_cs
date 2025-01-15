@@ -1,3 +1,13 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+  --text-color: #3C3C3C;
+}
+
+
 .centerContainer {
   display: flex;
   justify-content: center;
@@ -24,22 +34,150 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
-  font-family: Arial;
-  font-size: 25px;
+.signupCSS{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  width: 600px;
+  height: 800px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login {
+  font-family: Verdana;
+  font-size: 18px;
 }
 
 ::placeholder {
-  text-align: center;
+  padding-left: 5px;
+  text-align: left;
+}
+
+.newUsers{
+  font-family: Verdana;
+  font-size: 15px;
 }
 
 .loginButton {
-  background-color: #74adeb;
-  border-radius: 18px;
+  font-family: Verdana;
+  font-size: 15px;
+  background-color: #86d1fc;
+  border-radius: 0;
+  cursor: pointer;
+  width: 180px;
+  height: 36px;
+}
+
+.signupButton {
+  font-family: Verdana;
+  font-size: 15px;
+  background-color: #86d1fc;
+  border-radius: 0;
   cursor: pointer;
   width: 150px;
   height: 36px;
 }
+
+.signupText{
+  font-family: Verdana;
+}
+
+.outerBox {
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.welcomeText {
+  font-family: Rubik;
+  font-weight: 400;
+  font-size: 23px;
+  color: #3773f6;
+}
+
+.mainText {
+  font-family: Rubik;
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--text-color);
+}
+
+.informationText{
+  font-family: Rubik;
+  font-weight: 400;
+  font-size: 20px;
+  color: #3773f6
+}
+
+.dropDownText {
+  font-family: Manrope, sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  color: var(--text-color);
+}
+
+.ageText{
+  font-family: Rubik;
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--text-color)
+}
+
+.dataContainerHeader{
+  font-family: Rubik;
+  font-weight: 400;
+  font-size: 23px;
+  color: rgb(186, 124, 7)
+}
+
+.dataContainerMilestoneText{
+  font-family: Rubik;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 35px;
+  color: var(--text-color);
+  margin-top: 10px;
+  padding-left: 30px;
+  padding-bottom: 10px;
+  border: 2px solid #146ac6; /* Black border */
+  border-radius: 8px; /* Optional: rounded corners */
+  height: 280px;
+  width: 800px;
+}
+
+.dataContainerToysText{
+  font-family: Rubik;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  color: var(--text-color);
+  margin-top: 10px;
+  padding-left: 30px;
+  padding-bottom: 10px;
+  border: 2px solid #146ac6;
+  border-radius: 8px; /* Optional: rounded corners */
+  width: 800px;
+}
+
+.containersRow {
+  display: flex; /* Places child elements in a row */
+  justify-content: start; /* Adjusts spacing between the items */
+  align-items: flex-start;
+  gap: 30px; /* Aligns items vertically (adjust as needed) */
+}
+
+.myAppointmentsButton {
+  font-family: Verdana;
+  font-size: 15px;
+  background-color: #86d1fc;
+  border-radius: 0;
+  cursor: pointer;
+  width: 180px;
+  height: 36px;
+}
+
 
 
 

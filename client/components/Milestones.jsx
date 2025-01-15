@@ -1,7 +1,7 @@
 import React from "react";
 import {useState, useEffect} from "react";
 import AgeComponent from './AgeComponent';
-
+import styles from '../stylesheets/styles.module.css';
 
 function Milestones({ calculatedAgeRange }) {
   const [milestoneArray, setMilestones] = useState([]);
@@ -19,8 +19,8 @@ function Milestones({ calculatedAgeRange }) {
 
 
   return (
-    <div>
-      <p>Milestones for this age group:</p>
+    <div className={styles.dataContainerMilestoneText}>
+      <p className={styles.dataContainerHeader}>Top Milestones</p>
       {milestoneArray.map((item, index) => (
           <div key={index}>
             <input type="checkbox"/>
