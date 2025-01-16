@@ -4,7 +4,7 @@ import AgeComponent from './AgeComponent';
 import AppointmentsForm from './AppointmentsForm';
 import styles from '../stylesheets/styles.module.css';
 
-function Appointments () {
+function Appointments ({username}) {
   const [items, setApptData] = useState([]);
   const [showForm, setForm] = useState(false);
   const [apptDisplay, setApptDisplay] = useState(false);
@@ -13,7 +13,7 @@ function Appointments () {
   async function handleClick (){
     if(!apptDisplay) {
     try {
-    const response = await fetch('/main/getAppointments');
+    const response = await fetch(`/main/getAppointments?username=${encodeURIComponent(username)}`);
     const data = await response.json();
     console.log(data);
     setApptData(data);
@@ -57,7 +57,7 @@ function Appointments () {
     }
     </div>
     <p><button className={styles.myAppointmentsButton} type='submit' onClick={handleAddAppointments}>Add Appointments</button></p>
-    {showForm && <AppointmentsForm />}
+    {showForm && <AppointmentsForm username={username}/>}
   </>
   )
 }

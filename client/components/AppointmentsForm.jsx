@@ -2,9 +2,10 @@ import React from "react";
 import {useState, useEffect} from "react";
 import styles from '../stylesheets/styles.module.css';
 
-function AppointmentsForm () {
+function AppointmentsForm ({username}) {
 
-  const [formData, setFormData] = useState({date: '', type: '', location: '', provider: ''});
+  const [formData, setFormData] = useState({username: username, date: '', type: '', location: '', provider: ''});
+  const [showForm, setForm] = useState(true);
 
   function handleChange(e){
     setFormData({...formData, [e.target.name] : e.target.value});
@@ -12,7 +13,7 @@ function AppointmentsForm () {
 
   async function handleOnClick (e) {
     e.preventDefault();
-    console.log(formData);
+    console.log('formData', formData);
 
     try {
       const response = await fetch('/main/appointments', {
@@ -24,12 +25,17 @@ function AppointmentsForm () {
       });
 
       const data = await response.json();
-      setFormData({date: '', type: '', location: '', provider: ''});
+      setFormData({username: username, date: '', type: '', location: '', provider: ''});
     }
     catch (err){
       console.log("Error in submitting form data");
     }
   }
+
+  const handleDoneClick = () => {
+    setForm(false);
+  }
+
   return (
   <>
     <div className={styles.appointmentForm}>
@@ -47,8 +53,10 @@ function AppointmentsForm () {
 
       <p><button className={styles.signupButton}
       type="submit" id="submitForm" onClick={handleOnClick}>Submit</button></p>
+      <button type="button" onClick={handleDoneClick}>Done</button>
   </div>
 </>
+
   )
 }
 

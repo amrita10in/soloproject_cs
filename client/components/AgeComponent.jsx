@@ -1,6 +1,7 @@
 import React from "react";
 import {useState, useEffect} from "react";
 import { useSelector } from "react-redux";
+import Appointments from '../components/Appointments';
 import Milestones from '../components/Milestones';
 import Toys from '../components/Toys';
 import Dropdown from '../components/Dropdown';
@@ -80,14 +81,16 @@ function AgeComponent () {
 
   return (
   <>
-    <div className="ageCard">
+    <div >
+     <div className={styles.welcomeContainer}>
       <p id= "name" className= {styles.welcomeText}> Welcome {username}</p>
       <p id= "child" className={styles.mainText}>{childName} is {ageInMonths} months old as of today!</p>
+      </div>
       <br></br>
       <p id= "data" className={styles.informationText}>Here is some information about this age: </p>
       <Dropdown calculatedAgeRange={ageRange}/>
+      <Appointments username={username}/>
     </div>
-
   </>
   );
 };

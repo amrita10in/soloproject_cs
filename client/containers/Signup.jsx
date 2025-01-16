@@ -20,9 +20,6 @@ const Signup = () => {
     <p><label id="createDateOfBirth" className={styles.signupText}> Please enter your child's date of birth</label></p>
     <input type="text" name="childDOB" placeholder="mm/dd/yyyy" id="addBirth"></input>
 
-    <p><label for="image">Upload Image</label></p>
-    <input type="file" id="image" name="image"/>
-    
     <br/><br/>
     <p><button className={styles.signupButton} type="submit" id="addUser">Submit</button></p>
     </form>

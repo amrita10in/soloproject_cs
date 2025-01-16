@@ -39,8 +39,10 @@
   justify-content: center;
   align-items: center;
   text-align: left;
-  width: 600px;
-  height: 800px;
+  font-family: Rubik;
+  font-weight: 300;
+  width: 500px;
+  height: 600px;
   border: 1px solid #ccc;
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -65,7 +67,8 @@
   font-family: Verdana;
   font-size: 15px;
   background-color: #86d1fc;
-  border-radius: 0;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   width: 180px;
   height: 36px;
@@ -75,7 +78,8 @@
   font-family: Verdana;
   font-size: 15px;
   background-color: #86d1fc;
-  border-radius: 0;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   width: 150px;
   height: 36px;
@@ -88,6 +92,14 @@
 .outerBox {
   margin-top: 30px;
   margin-left: 30px;
+}
+
+.welcomeContainer {
+  padding-left: 20px;
+  width: 1000px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .welcomeText {
@@ -140,9 +152,10 @@
   color: var(--text-color);
   margin-top: 10px;
   padding-left: 30px;
-  padding-bottom: 10px;
-  border: 2px solid #146ac6; /* Black border */
-  border-radius: 8px; /* Optional: rounded corners */
+  padding-bottom: 20px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   height: 280px;
   width: 800px;
 }
@@ -155,9 +168,10 @@
   color: var(--text-color);
   margin-top: 10px;
   padding-left: 30px;
-  padding-bottom: 10px;
-  border: 2px solid #146ac6;
-  border-radius: 8px; /* Optional: rounded corners */
+  padding-bottom: 20px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 800px;
 }
 
@@ -173,7 +187,8 @@
   font-weight: 300;
   font-size: 15px;
   background-color: #86d1fc;
-  border-radius: 0;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   width: 180px;
   height: 36px;
@@ -188,9 +203,10 @@
   margin-top: 10px;
   padding-left: 30px;
   padding-bottom: 10px;
-  border: 2px solid #146ac6;
-  border-radius: 8px; /* Optional: rounded corners */
-  width: 200px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
 }
 
 .appointmentForm{
@@ -202,6 +218,10 @@
   margin-top: 10px;
   padding-left: 30px;
   padding-bottom: 10px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
 }
 
 

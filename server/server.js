@@ -22,6 +22,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static(path.join(__dirname, '..', 'dist')));
 
+
 app.get('/userInfo', userController.userInfo, (req, res) => {
   return res.status(200).json(res.locals.userData);
 });
@@ -73,8 +74,8 @@ module.exports = app;
 
 //add image of childgit**
 //add image wallpaper to website**
-//show appointments per user
 //ability to delete appointment
+//conditional rendering of done button
 
 //ability to add multiple children
 // authenticate with jot before display

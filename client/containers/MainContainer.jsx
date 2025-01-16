@@ -15,7 +15,6 @@ const MainContainer = () => {
     <div className="container">
       <div className="outerBox" className={styles.outerBox}>
         <AgeComponent/>
-        <Appointments/>
       </div>
     </div>
   );
