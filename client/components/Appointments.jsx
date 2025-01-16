@@ -40,10 +40,10 @@ function Appointments () {
     <div>
     <p ><button className={styles.myAppointmentsButton} type='submit' onClick={handleClick}>My Appointments</button></p>
     </div>
-    <div>
+    <div className= {styles.containersRow}>
       {items.map((item, index) => {
         return (
-        <div key={index}>
+        <div className={styles.appointmentsText} key={index}>
         <br/>
         <p> Appointment: {++index}</p>
         <p>   Date: {item.date}</p>

@@ -32,7 +32,7 @@ function AppointmentsForm () {
   }
   return (
   <>
-    <div>
+    <div className={styles.appointmentForm}>
       <p><label id='date'> Date </label></p>
       <p><input type= 'text' name='date' value={formData.date} onChange= {handleChange} placeholder= 'mm/dd/yyyy' id="dateField"></input></p>
 
@@ -45,7 +45,7 @@ function AppointmentsForm () {
       <p><label id='provider'>Provider</label></p>
       <p><input type= "text" name='provider' value={formData.provider} onChange={handleChange} id="providerField"></input></p>
 
-      <p><button 
+      <p><button className={styles.signupButton}
       type="submit" id="submitForm" onClick={handleOnClick}>Submit</button></p>
   </div>
 </>

@@ -11,7 +11,12 @@ const userSchema = new Schema({
   username: {type: String, required: true, unique: true},
   password: {type: String, required: true},
   childName: {type: String, required: true},
-  childDOB: {type: String, required: true}
+  childDOB: {type: String, required: true},
+  image:
+    {
+        data: Buffer,
+        contentType: String
+    }
 })
 
 module.exports = mongoose.model('User', userSchema);

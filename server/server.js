@@ -71,8 +71,8 @@ app.listen(PORT, ()=>{console.log(`Listening on port ${PORT}...`); });
 
 module.exports = app;
 
-//add image of childgit
-//add image wallpaper to website
+//add image of childgit**
+//add image wallpaper to website**
 //show appointments per user
 //ability to delete appointment
 

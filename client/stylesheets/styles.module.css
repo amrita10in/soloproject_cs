@@ -134,7 +134,7 @@
 
 .dataContainerMilestoneText{
   font-family: Rubik;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 18px;
   line-height: 35px;
   color: var(--text-color);
@@ -149,7 +149,7 @@
 
 .dataContainerToysText{
   font-family: Rubik;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 18px;
   line-height: 20px;
   color: var(--text-color);
@@ -169,7 +169,8 @@
 }
 
 .myAppointmentsButton {
-  font-family: Verdana;
+  font-family: Rubik;
+  font-weight: 300;
   font-size: 15px;
   background-color: #86d1fc;
   border-radius: 0;
@@ -178,7 +179,30 @@
   height: 36px;
 }
 
+.appointmentsText{
+  font-family: Rubik;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 20px;
+  color: var(--text-color);
+  margin-top: 10px;
+  padding-left: 30px;
+  padding-bottom: 10px;
+  border: 2px solid #146ac6;
+  border-radius: 8px; /* Optional: rounded corners */
+  width: 200px;
+}
 
+.appointmentForm{
+  font-family: Rubik;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 20px;
+  color: var(--text-color);
+  margin-top: 10px;
+  padding-left: 30px;
+  padding-bottom: 10px;
+}
 
 
 
