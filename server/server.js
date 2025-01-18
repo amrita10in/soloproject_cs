@@ -43,6 +43,10 @@ app.post('/main/appointments', appointmentsController.createAppointment, (req, r
   return res.status(200).json({ message: 'Appointment created successfully' });
 });
 
+app.delete('/main/appointments/date', appointmentsController.deleteAppointment, (req, res) => {
+  return res.status(200).json({message: 'Appointment deleted successfully'});
+});
+
 app.post('/signup', userController.createUser, (req, res) => {
   return res.status(200).redirect('/');
 });
@@ -72,12 +76,3 @@ app.listen(PORT, ()=>{console.log(`Listening on port ${PORT}...`); });
 
 module.exports = app;
 
-//add image of childgit**
-//add image wallpaper to website**
-//ability to delete appointment
-//conditional rendering of done button
-
-//ability to add multiple children
-// authenticate with jot before display
-//typescript implement
-//implement redux if time permits

@@ -40,6 +40,7 @@
   align-items: center;
   text-align: left;
   font-family: Rubik;
+  font-size: 15px;
   font-weight: 300;
   width: 500px;
   height: 600px;
@@ -86,7 +87,8 @@
 }
 
 .signupText{
-  font-family: Verdana;
+  font-family: Rubik;
+  font-weight: 300;
 }
 
 .outerBox {
@@ -100,6 +102,12 @@
   border: 1px solid #ccc;
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-image: url('/client/assets/Nest.jpeg');
+  height: 130px;
+  width: 600px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right center;
 }
 
 .welcomeText {
@@ -158,6 +166,11 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   height: 280px;
   width: 800px;
+  background-image: url('/client/assets/Milestones.jpeg');
+  background-size: 200px 90px;
+  background-repeat: no-repeat;
+  background-position: right top;
+
 }
 
 .dataContainerToysText{
@@ -173,13 +186,17 @@
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 800px;
+  background-image: url('/client/assets/Toys.jpeg');
+  background-size: 120px 90px;
+  background-repeat: no-repeat;
+  background-position: right top;
 }
 
 .containersRow {
-  display: flex; /* Places child elements in a row */
-  justify-content: start; /* Adjusts spacing between the items */
+  display: flex;
+  justify-content: start;
   align-items: flex-start;
-  gap: 30px; /* Aligns items vertically (adjust as needed) */
+  gap: 30px;
 }
 
 .myAppointmentsButton {
@@ -216,6 +233,7 @@
   line-height: 20px;
   color: var(--text-color);
   margin-top: 10px;
+  margin-bottom: 100px;
   padding-left: 30px;
   padding-bottom: 10px;
   border: 1px solid #ccc;
@@ -223,6 +241,18 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 300px;
 }
+
+.apptSubmitButton{
+  display: flex;
+  justify-content: left;
+  align-items: left;
+}
+
+body{
+  background-color: #ffffffe0;
+}
+
+
 
 
 

@@ -7,7 +7,7 @@ const Signup = () => {
   <div className={styles.centerContainer}>
     <div className={styles.signupCSS}>
       <form method='POST' action='/signup'>
-    <p id="signupTitle" className={styles.login}> Sign up: </p>
+    <p id="signupTitle" className={styles.login}> Sign up </p>
     <p><label id="createUser" className={styles.signupText}> Please enter your username</label></p>
     <input type="text" name="username" id ="usernameInput"></input>
 

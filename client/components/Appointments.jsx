@@ -10,7 +10,7 @@ function Appointments ({username}) {
   const [apptDisplay, setApptDisplay] = useState(false);
 
 
-  async function handleClick (){
+  async function handleMyApptClick (){
     if(!apptDisplay) {
     try {
     const response = await fetch(`/main/getAppointments?username=${encodeURIComponent(username)}`);
@@ -30,15 +30,27 @@ function Appointments ({username}) {
 
 
   function handleAddAppointments (){
-    setForm(true);
+    showForm ? setForm(false) : setForm(true);
   }
+
+  async function handleDelete(date){
+    console.log('date', date);
+  try{
+    const response  = await fetch(`/main/appointments/date?date=${encodeURIComponent(date)}`, {
+      method: 'DELETE',
+      });
+    } catch(err){
+      console.log('Error in deleting data:' + err);
+    }
+    handleMyApptClick();
+}
 
 
 
   return (
   <>
     <div>
-    <p ><button className={styles.myAppointmentsButton} type='submit' onClick={handleClick}>My Appointments</button></p>
+    <p ><button className={styles.myAppointmentsButton} type='submit' onClick={handleMyApptClick}>My Appointments</button></p>
     </div>
     <div className= {styles.containersRow}>
       {items.map((item, index) => {
@@ -50,6 +62,7 @@ function Appointments ({username}) {
         <p>   Type: {item.type}</p>
         <p>   Location: {item.location}</p>
         <p>   Provider: {item.provider}</p>
+        <button type="submit" onClick={()=> handleDelete(item.date)}> Delete </button>
         <br/>
         </div>
       )
@@ -57,7 +70,7 @@ function Appointments ({username}) {
     }
     </div>
     <p><button className={styles.myAppointmentsButton} type='submit' onClick={handleAddAppointments}>Add Appointments</button></p>
-    {showForm && <AppointmentsForm username={username}/>}
+    {showForm && <AppointmentsForm username={username} apptData={handleMyApptClick} setApptDisplay={setApptDisplay}/>}
   </>
   )
 }

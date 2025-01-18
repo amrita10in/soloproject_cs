@@ -6,7 +6,6 @@ const appointmentsController = {};
 appointmentsController.getAppointments = async (req, res, next) => {
   try{
   const {username} = req.query;
-  console.log('username in getAppt', username);
   const data = await Appointments.find({username});
   res.locals.allAppointments = data;
   next();
@@ -17,7 +16,6 @@ appointmentsController.getAppointments = async (req, res, next) => {
 
 appointmentsController.createAppointment = async (req, res, next) => {
   const {username, date, type, location, provider} = req.body;
-  console.log('usernameincreateAppt', username)
   if( typeof date !== 'string' || typeof type !== 'string' || typeof location !== 'string' || typeof provider !== 'string'){
     return next({
       log: 'Error in appointments.thiscreateAppointment',
@@ -31,6 +29,17 @@ appointmentsController.createAppointment = async (req, res, next) => {
     return next();
   } catch (err){
     return next('Error in appointments.whichcreateAppointment: ' + JSON.stringify(err));
+  }
+}
+
+
+appointmentsController.deleteAppointment = async (req, res, next) => {
+  const {date} = req.query;
+  try {
+    await Appointments.deleteOne({date});
+    return next();
+  } catch (err){
+    return next('Error in deleteAppointment controller: ' + JSON.stringify(err));
   }
 }
 
